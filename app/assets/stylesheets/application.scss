@@ -14,8 +14,9 @@
 
 // colors
 $white: #FFFFFF;
-$grey: #F9F9F9;
-$black:#000000; 
+$grey:  #A2A0A3;
+$black:#0B0A0C; 
+$yellow: #FD9E11;
 
 //Media Queries
 $container-sm: 540px;
@@ -24,9 +25,10 @@ $container-lg: 960px;
 
 
 body {
+  background: $black;
   font-family: Lato, Helvetica, Roboto, sans-serif;
-  background: linear-gradient(37.33deg, $white 74.14%,  $grey 86.22%);
   display: flex;
+  color: $white;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -40,9 +42,15 @@ body {
 }
 
 .subscription {
+  width: 100%;
   padding: 1em;
 
+  h1 {
+    color: $grey;
+  }
+
   &__headers {
+    color: $yellow;
     display: flex;
     flex-direction: column;
 
@@ -54,7 +62,7 @@ body {
       flex-direction: row;
 
       b {
-        width:200px;
+        width: 50%;
       }
 
       b:not(:first-child) {
@@ -66,17 +74,61 @@ body {
   &__details {
     display: flex;
     flex-direction: column;
+    font-weight: 100;
     
     @media screen and (min-width: $container-md) {
       flex-direction: row;
 
       p {
-        width:200px;
+        width: 50%;
       }
 
       p:not(:first-child) {
         margin-left: 1em;
       }
     }
+  }
+
+  &__pagination {
+    margin-left: 18%;
+  }
+}
+
+.pagination a, .pagination span.current, .pagination span.gap {
+  float: left;
+  padding: 0 14px;
+  line-height: 38px;
+  text-decoration: none;
+  background-color: $yellow;
+  border: 1px solid $yellow;
+  border-radius: 0 0.5em;
+  border-left-width: 0;
+}
+
+.pagination {
+  .first{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .prev {
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .page{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .next{
+      padding : 0;
+      float: none;
+      border: none;
+  }
+  .last{
+      padding : 0;
+      float: none;
+      border: none;
   }
 }
