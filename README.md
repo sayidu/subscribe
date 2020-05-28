@@ -1,6 +1,6 @@
-# Subscriptions
+# Subscribe
 
-This is a quick MVC Subscription application with only two models: `Subscription` and `Plans`
+This is a quick MVC subscription application with only two models: `Subscription` and `Plans`
 
 ## Setup
 * Setup Database by running the following commands:
