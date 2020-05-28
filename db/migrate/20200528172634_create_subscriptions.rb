@@ -6,5 +6,7 @@ class CreateSubscriptions < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+
+    add_index :subscriptions, :plan_id
   end
 end

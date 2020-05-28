@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_05_28_172643) do
     t.integer "plan_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["plan_id"], name: "index_subscriptions_on_plan_id"
   end
 
 end

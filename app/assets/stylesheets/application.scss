@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+// colors
+$white: #FFFFFF;
+$grey: #F9F9F9;
+$black:#000000; 
+
+//Media Queries
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+
+
+body {
+  font-family: Lato, Helvetica, Roboto, sans-serif;
+  background: linear-gradient(37.33deg, $white 74.14%,  $grey 86.22%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  @media screen and (min-width: $container-md) {
+    padding: 2%;
+    font-size: 1rem;
+    align-items: flex-start;
+    justify-content: left;
+  }
+}
+
+.subscription {
+  padding: 1em;
+
+  &__headers {
+    display: flex;
+    flex-direction: column;
+
+    b {
+      margin-bottom: 5px;
+    }
+
+    @media screen and (min-width: $container-md) {
+      flex-direction: row;
+
+      b {
+        width:200px;
+      }
+
+      b:not(:first-child) {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    
+    @media screen and (min-width: $container-md) {
+      flex-direction: row;
+
+      p {
+        width:200px;
+      }
+
+      p:not(:first-child) {
+        margin-left: 1em;
+      }
+    }
+  }
+}

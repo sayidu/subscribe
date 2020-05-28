@@ -1,0 +1,17 @@
+<div class="subscription"> 
+  <h2>Subscription Information</h2></hr>
+
+  <div class="subscription__table"> 
+    <div class="subscription__headers"> 
+      <b> Email </b> 
+      <b> Plan </b>
+    </div>
+    <% @subscriptions.map do |subscription| %>
+      <div class="subscription__details"> 
+        <p> <%= subscription.email %>  </p> 
+        <p> <%= subscription.plan.name  %> </p> 
+      </div> 
+    <% end %>
+</div>
+
+<%= paginate @subscriptions %>
