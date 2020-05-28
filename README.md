@@ -1,6 +1,6 @@
 # Subscribe
 
-This is a quick MVC subscription application with only two models: `Subscription` and `Plans`
+This is a quick one page subscription application with only two models: `Subscription` and `Plans`
 
 ## Setup
 * Setup Database by running the following commands:
@@ -11,3 +11,7 @@ This is a quick MVC subscription application with only two models: `Subscription
 * Run `bundle install`
 
 * Start server with  `bundle exec rails s`
+
+## Live URL
+https://subscribe-one.herokuapp.com/
+
